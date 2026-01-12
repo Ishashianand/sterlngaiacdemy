@@ -460,11 +460,20 @@
         border-color: var(--primary-red);
       }
 
-      /* Skills Grid (Purple/Burgundy Mix) */
+      /* Skills Grid (UPDATED: Premium Cosmic Purple) */
       .skills-section {
-        background: linear-gradient(135deg, #450a0a 0%, #7f1d1d 50%, #581c87 100%);
+        /* Deep Indigo to Vibrant Violet Gradient */
+        background: linear-gradient(135deg, #1e1b4b 0%, #4c1d95 60%, #7c3aed 100%);
         color: white;
-        padding: 80px 20px;
+        padding: 100px 20px;
+        position: relative;
+      }
+      
+      /* Subtle mesh pattern overlay for depth */
+      .skills-section::before {
+        content: ""; position: absolute; top:0; left:0; width:100%; height:100%;
+        background-image: radial-gradient(rgba(255,255,255,0.1) 1px, transparent 1px);
+        background-size: 40px 40px; opacity: 0.1; pointer-events: none;
       }
 
       .skills-grid {
@@ -473,23 +482,27 @@
         gap: 20px;
         max-width: 1200px;
         margin: 40px auto 0;
+        position: relative;
+        z-index: 2;
       }
 
       .skill-item {
-        background: rgba(255,255,255,0.1);
-        padding: 20px;
-        border-radius: 12px;
-        backdrop-filter: blur(10px);
+        background: rgba(255, 255, 255, 0.05); /* Glassmorphism effect */
+        padding: 24px;
+        border-radius: 16px;
+        backdrop-filter: blur(12px);
         display: flex;
         align-items: center;
         gap: 12px;
-        transition: background 0.3s, transform 0.2s;
+        transition: all 0.3s ease;
         border: 1px solid rgba(255,255,255,0.1);
       }
       
       .skill-item:hover {
-        background: rgba(255,255,255,0.2);
-        transform: translateY(-2px);
+        background: rgba(255, 255, 255, 0.1);
+        transform: translateY(-5px);
+        border-color: rgba(255, 255, 255, 0.3);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.2);
       }
 
       /* Offers & Open House */
@@ -790,15 +803,17 @@
           <ul style="list-style: none; margin-bottom: 0; padding: 0;">
             <li style="margin-bottom: 16px; display: flex; gap: 12px; align-items: start; color: var(--dark-light); font-size: 15px;">
               <span style="color: var(--primary-red); font-weight: 700; flex-shrink: 0;">✓</span>
-              <span><strong>First-Mover Advantage:</strong> The "AI Agent" market is just starting. Become an expert before it gets crowded.</span>
+              <span><strong>No Tech Degree Needed:</strong> Logic matters more than syntax. This is the only tech path where creativity beats coding speed.</span>
+             
+            </li>
+            <li style="margin-bottom: 16px; display: flex; gap: 12px; align-items: start; color: var(--dark-light); font-size: 15px;">
+              <span style="color: var(--primary-red); font-weight: 700; flex-shrink: 0;">✓</span>
+               <span><strong>First-Mover Advantage:</strong> The "AI Agent" market is just starting. Become an expert before it gets crowded.</span>
             </li>
             <li style="margin-bottom: 16px; display: flex; gap: 12px; align-items: start; color: var(--dark-light); font-size: 15px;">
               <span style="color: var(--primary-red); font-weight: 700; flex-shrink: 0;">✓</span>
               <span><strong>Build, Don't Just Prompt:</strong> Most courses teach basic prompting. We teach you how to build autonomous AI employees.</span>
-            </li>
-            <li style="margin-bottom: 16px; display: flex; gap: 12px; align-items: start; color: var(--dark-light); font-size: 15px;">
-              <span style="color: var(--primary-red); font-weight: 700; flex-shrink: 0;">✓</span>
-              <span><strong>No Tech Degree Needed:</strong> Logic matters more than syntax. This is the only tech path where creativity beats coding speed.</span>
+              
             </li>
           </ul>
 
@@ -858,9 +873,9 @@
           Confused about an AI career? Get clear answers.
         </p>
         <ul style="text-align: left; margin-bottom: 24px; font-size: 14px; color: var(--dark-light); space-y: 8px;">
-          <li>• Career Guidance & Salary Expectations</li>
-          <li>• Course Breakdown & Internship Roadmap</li>
-          <li>• AI Career Pathways explained simply</li>
+          <li> Career Guidance & Salary Expectations</li>
+          <li> Course Breakdown & Internship Roadmap</li>
+          <li> AI Career Pathways explained simply</li>
         </ul>
         <a href="#apply" class="cta-primary" style="width: 100%; padding: 12px;" onclick="setInterest('Open House')">Reserve Free Seat</a>
       </div>
@@ -928,7 +943,7 @@
         </div>
 
         <button type="submit" class="form-submit" id="submitBtn">
-          Submit
+          Submit Enquiry
         </button>
       </form>
       
